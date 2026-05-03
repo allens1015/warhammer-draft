@@ -1,0 +1,421 @@
+[
+    {
+        "name": "Malekith, the Witch King",
+        "category": "lord",
+        "type": "model",
+        "pointsCost": 600,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "slotsUsed": {
+            "lord": 1,
+            "hero": 1
+        },
+        "repeatable": false,
+        "mounts": [
+            {
+                "name": "Malekith, the Witch King (on Foot)",
+                "pointsCost": 600
+            },
+            {
+                "name": "Malekith, the Witch King (on Cold One)",
+                "pointsCost": 630
+            },
+            {
+                "name": "Malekith, the Witch King (on Black Dragon)",
+                "pointsCost": 920
+            },
+            {
+                "name": "Malekith, the Witch King (on Black Chariot with one other crewman)",
+                "pointsCost": 710
+            }
+        ]
+    },
+    {
+        "name": "Morathi, the Hag Sorceress",
+        "category": "lord",
+        "type": "model",
+        "pointsCost": 455,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "repeatable": false,
+        "mounts": [
+            {
+                "name": "Morathi, the Hag Sorceress (with Heartrender)",
+                "pointsCost": 500
+            },
+            {
+                "name": "Morathi, the Hag Sorceress (with Darksword)",
+                "pointsCost": 480
+            }
+        ]
+    },
+    {
+        "name": "Crone Hellebron, the Hag Queen",
+        "category": "lord",
+        "type": "model",
+        "pointsCost": 350,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "repeatable": false,
+        "mounts": [
+            {
+                "name": "Crone Hellebron, the Hag Queen (on Foot)",
+                "pointsCost": 350
+            },
+            {
+                "name": "Crone Hellebron, the Hag Queen (on Manticore)",
+                "pointsCost": 550
+            }
+        ]
+    },
+    {
+        "name": "Dreadlord",
+        "category": "lord",
+        "type": "model",
+        "pointsCost": 140,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "mounts": [
+            {
+                "name": "Dreadlord (on Foot)",
+                "pointsCost": 140
+            },
+            {
+                "name": "Dreadlord (on Dark Steed)",
+                "pointsCost": 158
+            },
+            {
+                "name": "Dreadlord (on Cold One)",
+                "pointsCost": 170
+            },
+            {
+                "name": "Dreadlord (on Dark Pegasus)",
+                "pointsCost": 190
+            },
+            {
+                "name": "Dreadlord (on Manticore)",
+                "pointsCost": 340
+            },
+            {
+                "name": "Dreadlord (on Black Dragon)",
+                "pointsCost": 360,
+                "slotsUsed": {
+                    "lord": 1,
+                    "hero": 1
+                }
+            },
+            {
+                "name": "Dreadlord (on Cold One Chariot, replacing one crew)",
+                "pointsCost": 230
+            }
+        ]
+    },
+    {
+        "name": "Supreme Sorceress",
+        "category": "lord",
+        "type": "model",
+        "pointsCost": 225,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "mounts": [
+            {
+                "name": "Supreme Sorceress (on Foot)",
+                "pointsCost": 225
+            },
+            {
+                "name": "Supreme Sorceress (on Dark Steed)",
+                "pointsCost": 243
+            },
+            {
+                "name": "Supreme Sorceress (on Cold One)",
+                "pointsCost": 255
+            },
+            {
+                "name": "Supreme Sorceress (on Dark Pegasus)",
+                "pointsCost": 275
+            },
+            {
+                "name": "Supreme Sorceress (on Manticore)",
+                "pointsCost": 425
+            },
+            {
+                "name": "Supreme Sorceress (on Black Dragon)",
+                "pointsCost": 545
+            }
+        ]
+    },
+    {
+        "name": "Malus Darkblade, Scion of Hag Graef",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 275,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "repeatable": false
+    },
+    {
+        "name": "Shadowblade, Master of Assassins",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 300,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "repeatable": false
+    },
+    {
+        "name": "Lokhir Fellheart, Captain of the Tower of Blessed Dread",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 250,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "repeatable": false
+    },
+    {
+        "name": "Sorceress",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 100,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "mounts": [
+            {
+                "name": "Sorceress (on Foot)",
+                "pointsCost": 100
+            },
+            {
+                "name": "Sorceress (on Dark Steed)",
+                "pointsCost": 112
+            },
+            {
+                "name": "Sorceress (on Cold One)",
+                "pointsCost": 120
+            },
+            {
+                "name": "Sorceress (on Dark Pegasus)",
+                "pointsCost": 150
+            }
+        ]
+    },
+    {
+        "name": "Master",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 80,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "mounts": [
+            {
+                "name": "Master (on Foot)",
+                "pointsCost": 80
+            },
+            {
+                "name": "Master (on Dark Steed)",
+                "pointsCost": 92
+            },
+            {
+                "name": "Master (on Cold One)",
+                "pointsCost": 100
+            },
+            {
+                "name": "Master (on Dark Pegasus)",
+                "pointsCost": 130
+            },
+            {
+                "name": "Master (on Manticore)",
+                "pointsCost": 280,
+                "slotsUsed": {
+                    "hero": 2
+                }
+            },
+            {
+                "name": "Master (on Cold One Chariot, replacing one crew)",
+                "pointsCost": 170
+            }
+        ]
+    },
+    {
+        "name": "Death Hag",
+        "category": "hero",
+        "type": "model",
+        "pointsCost": 90,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "mounts": [
+            {
+                "name": "Death Hag (on Foot)",
+                "pointsCost": 90
+            },
+            {
+                "name": "Death Hag (on Cauldron of Blood)",
+                "pointsCost": 200
+            }
+        ]
+    },
+    {
+        "name": "Dark Elf Warriors (5)",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 30,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Dark Elf Repeater Crossbowmen (5)",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 50,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Black Ark Corsairs (5)",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 50,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Dark Riders (5)",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 85,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Harpies (5)",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 55,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Dark Elf Assassin",
+        "category": "core",
+        "type": "model",
+        "pointsCost": 90,
+        "count": 1,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Witch Elves (5)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 50,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Shades (5)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 80,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Har Ganeth Executioners (5)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 60,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Har Ganeth Executioners (5, Tullaris)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 155,
+        "count": 5,
+        "image": "",
+        "description": "",
+        "repeatable": false
+    },
+    {
+        "name": "Cold One Knights (5)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 135,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Cold One Chariot",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 100,
+        "count": 1,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Black Guard of Naggarond (5)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 65,
+        "count": 5,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Black Guard of Naggarond (5, Kouran)",
+        "category": "special",
+        "type": "model",
+        "pointsCost": 140,
+        "count": 5,
+        "image": "",
+        "description": "",
+        "repeatable": false
+    },
+    {
+        "name": "Reaper Bolt Thrower",
+        "category": "rare",
+        "type": "model",
+        "pointsCost": 100,
+        "count": 1,
+        "image": "",
+        "description": "",
+        "maxPerSlot": 2
+    },
+    {
+        "name": "War Hydra",
+        "category": "rare",
+        "type": "model",
+        "pointsCost": 175,
+        "count": 1,
+        "image": "",
+        "description": ""
+    },
+    {
+        "name": "Sword of Striking",
+        "category": "magic",
+        "type": "common_magic_item",
+        "pointsCost": 15,
+        "image": "",
+        "description": ""
+    }
+]
