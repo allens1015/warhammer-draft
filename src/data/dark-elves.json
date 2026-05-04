@@ -40,7 +40,7 @@
         "image": "",
         "description": "",
         "repeatable": false,
-        "mounts": [
+        "choices": [
             {
                 "name": "Morathi, the Hag Sorceress (with Heartrender)",
                 "pointsCost": 500
