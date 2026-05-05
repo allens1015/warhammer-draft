@@ -416,6 +416,54 @@
         "type": "common_magic_item",
         "pointsCost": 15,
         "image": "",
-        "description": ""
+        "description": "Weapon: +1 to hit"
+    },
+    {
+        "name": "Sword of Battle",
+        "category": "magic",
+        "type": "common_magic_item",
+        "pointsCost": 15,
+        "image": "",
+        "description": "Weapon: +1 Attack"
+    },
+    {
+        "name": "Sword of Might",
+        "category": "magic",
+        "type": "common_magic_item",
+        "pointsCost": 15,
+        "image": "",
+        "description": "Weapon: +1 Strength"
+    },
+    {
+        "name": "Biting Blade",
+        "category": "magic",
+        "type": "common_magic_item",
+        "pointsCost": 5,
+        "image": "",
+        "description": "Weapon: -1 armour save"
+    },
+    {
+        "name": "Enchanted Shield",
+        "category": "magic",
+        "type": "common_magic_item",
+        "pointsCost": 15,
+        "image": "",
+        "description": "Armour: 5+ armour save"
+    },
+    {
+        "name": "Deathmask",
+        "category": "magic",
+        "type": "enchanted_item",
+        "pointsCost": 50,
+        "image": "",
+        "description": "The character causes terror"
+    },
+    {
+        "name": "The Hydra's Teeth",
+        "category": "magic",
+        "type": "enchanted_item",
+        "pointsCost": 40,
+        "image": "",
+        "description": "The model has five Hydra's Teeth. Each can be used once as a thrown weapon with a range of 12\". Declare how many of its Hydra's Teeth the model is throwing before rolling to hit - there is no 'multiple shots' penalty for throwing more than one tooth at a time. For each hit, make D6 WS2 S# close combat attacks against the target unit. Up to two attacks per turn can be allocated by the Dark Elves player against each character or Champion in the unit."
     }
 ]
