@@ -412,58 +412,450 @@
     },
     {
         "name": "Sword of Striking",
-        "category": "magic",
-        "type": "common_magic_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 15,
         "image": "",
-        "description": "Weapon: +1 to hit"
+        "description": "Weapon; +1 to hit"
     },
     {
         "name": "Sword of Battle",
-        "category": "magic",
-        "type": "common_magic_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 15,
         "image": "",
-        "description": "Weapon: +1 Attack"
+        "description": "Weapon; +1 Attack"
     },
     {
         "name": "Sword of Might",
-        "category": "magic",
-        "type": "common_magic_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 15,
         "image": "",
-        "description": "Weapon: +1 Strength"
+        "description": "Weapon; +1 Strength"
     },
     {
         "name": "Biting Blade",
-        "category": "magic",
-        "type": "common_magic_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 5,
         "image": "",
-        "description": "Weapon: -1 armour save"
+        "description": "Weapon; -1 armour save"
     },
     {
         "name": "Enchanted Shield",
-        "category": "magic",
-        "type": "common_magic_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 15,
         "image": "",
-        "description": "Armour: 5+ armour save"
+        "description": "Armour; 5+ armour save"
+    },
+    {
+        "name": "Talisman of Protection",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "Talisman; 6+ ward save"
+    },
+    {
+        "name": "Staff of Sorcery",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Arcane; +1 to dispel"
+    },
+    {
+        "name": "Dispel Scroll",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Arcane; one use only; Automatically dispel an enemy spell."
+    },
+    {
+        "name": "Power Stone",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 20,
+        "image": "",
+        "description": "Arcane; one use only; +2 dice to cast a spell."
+    },
+    {
+        "name": "War Banner",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Banner; +1 combat resolution"
     },
     {
         "name": "Deathmask",
-        "category": "magic",
-        "type": "enchanted_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 50,
         "image": "",
-        "description": "The character causes terror"
+        "description": "Made from enchanted gold of the Blackspine Mountains, the Deathmask depicts Khaine in his aspect of the Deathbringer, the merciless slayer.<br>The character causes terror."
     },
     {
         "name": "The Hydra's Teeth",
-        "category": "magic",
-        "type": "enchanted_item",
+        "category": "magic_item",
+        "type": "",
         "pointsCost": 40,
         "image": "",
-        "description": "The model has five Hydra's Teeth. Each can be used once as a thrown weapon with a range of 12\". Declare how many of its Hydra's Teeth the model is throwing before rolling to hit - there is no 'multiple shots' penalty for throwing more than one tooth at a time. For each hit, make D6 WS2 S# close combat attacks against the target unit. Up to two attacks per turn can be allocated by the Dark Elves player against each character or Champion in the unit."
+        "description": "Taken from the corpse of a slain War Hydra, each of these fangs is finely sculpted into a skeletal figurine. They are enchanted with dark magic to summon forth those slain by the Hydra while it was alive.<br>The model has five Hydra's Teeth. Each can be used once as a thrown weapon with a range of 12\". Declare how many of its Hydra's Teeth the model is throwing before rolling to hit – there is no 'multiple shots' penalty for throwing more than one tooth at a time. For each hit, make D6 WS2 S3 close combat attacks against the target unit. Up to two attacks per turn can be allocated by the Dark Elves player against each character or Champion in the unit."
+    },
+    {
+        "name": "Crystal of Midnight",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Inside this black glowing crystal is a malignant captured spirit, which can be unleashed to seek out the mind of an enemy magic user and steal their thoughts.<br>One use only. Nominate another Wizard anywhere on the table at the start of any Dark Elves turn. The Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly determined spell for the rest of the battle."
+    },
+    {
+        "name": "Black Dragon Egg",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 30,
+        "image": "",
+        "description": "Many of the eggs laid by Malekith's Black Dragons do not develop into full hatchlings. When eaten, the properties of the Dragon are temporarily passed on.<br>One use only. The model may consume the Black Dragon Egg at the start of any player turn. For the remainder of that turn the model has Toughness 6 and the Noxious Breath attack (see page 61)."
+    },
+    {
+        "name": "Potion of Strength",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 30,
+        "image": "",
+        "description": "A potent magical brew created from Troll blood and the heart of a Griffon.<br>One use only. The model may drink this at the start of any close combat and it lasts until the start of the next player's turn. While it is in effect, the Potion of Strength grants +3 Strength."
+    },
+    {
+        "name": "Gem of Nightmares",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "When the magic of this dark stone is unleashed, the bearer is surrounded by a vortex of whirling, wailing apparitions that burn with dark flames.<br>One use only. The Gem of Nightmares can be used at the start of any turn. Until the end of that turn, the model and any unit it has joined cause Fear."
+    },
+    {
+        "name": "The Guiding Eye",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Wrought in black iron with a oval ruby at its centre, the Guiding Eye grants mystical sight to the wearer.<br>One use only. The character and any unit he joins may re-roll missed shooting to hit rolls."
+    },
+    {
+        "name": "Executioner's Axe (Models on foot only)",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 80,
+        "image": "",
+        "description": "The Executioner's Axe is a huge, black-bladed weapon bound with spells of dismemberment. A single blow from it can cut any opponent in half.<br>Requires two hands. Strikes last. In close combat, the wielder counts as having a Strength double that of their target's Toughness, up to a maximum of Strength 10. In addition, the Executioner's Axe causes D3 wounds."
+    },
+    {
+        "name": "Sword of Ruin",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 50,
+        "image": "",
+        "description": "This magical sword can cleave through armour as if it were air.<br>No armour saves may be taken against hits from the Sword of Ruin."
+    },
+    {
+        "name": "Web of Shadows",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 50,
+        "image": "",
+        "description": "Woven from the hair of Witch Elves and studded with ensorcelled Harpy fangs, a victim caught in the Web of Shadows will be ripped to shreds.<br>One use only. The character uses the Web of Shadows instead of making any normal attacks that round. When used, one model in base contact with the character automatically takes 2D6 Strength 3 hits. Wounds caused do not carry over on to other models. A model with the Web of Shadows may instead choose to use a mundane weapon in any round of combat."
+    },
+    {
+        "name": "Chillblade",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 50,
+        "image": "",
+        "description": "This sword holds a terrible spell of coldness that seeps into the Dark Elf's victim, freezing their soul and temporarily paralysing them.<br>Enemy models suffering hits from the Chillblade must pass a Toughness test for every hit. If a test is failed the model suffers a wound with no armour save. Models suffering a wound (after ward saves, etc) may not make any close combat attacks that turn. No normal roll to wound is made for attacks with the Chillblade."
+    },
+    {
+        "name": "Heartseeker",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Heartseeker has an uncanny ability to find the heart of a living thing. Dark Elves delight in its ability to destroy the lifeforce of their victims.<br>The character may re-roll all failed rolls to hit and to wound in close combat."
+    },
+    {
+        "name": "Hydra Blade",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "The Hydra Blade strikes repeatedly, like its many-headed namesake.<br>A character wielding the Hydra Blade gains D3 additional attacks (roll just before making attacks)."
+    },
+    {
+        "name": "Caledor's Bane",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "This dire lance is etched with the fiery blood of Dragons and is much feared by High Elf Princes from the realm of Caledor.<br>+3 Strength on the charge. Models may not use Scaly Skin saving throws against hits from Caledor's Bane."
+    },
+    {
+        "name": "Dagger of Hotek",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 30,
+        "image": "",
+        "description": "Created by Hotek, a renegade priest of Vaul, this blade allows the wielder to strike with blinding speed.<br>The Dagger of Hotek is an additional hand weapon, (it can be used with a mundane hand weapon) and grants the bearer the Always Strikes First special rule."
+    },
+    {
+        "name": "Lifetaker",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 30,
+        "image": "",
+        "description": "Lifetaker is a repeater crossbow fashioned from blackest steel, with bolts dipped in the venom of a Black Dragon.<br>Range: 30\"   Str: 4   Rules: Multiple Shot x3<br>Lifetaker always hits on a roll of 2+, regardless of any to hit modifiers, magic items, etc."
+    },
+    {
+        "name": "Crimson Death",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "This huge halberd was carried to battle by Dark Lord Khalak of Ghrond, the first Captain of the Black Guard. It has been passed down to every Captain to have succeeded him.<br>Requires two hands to use. A model wielding Crimson Death always strikes with Strength 6. No other modifiers or magic items can ever modify this."
+    },
+    {
+        "name": "Deathpiercer",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "This lance is tipped with a blade carved from the claws of two dozen Cold Ones. It leaves ragged wounds that see its victims swiftly bleed to death.<br>Lance. Killing blow."
+    },
+    {
+        "name": "Whip of Agony",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Belonging to the feared Beastlord Rakarth, the Whip of Agony inflicts pain that even the most thick-skinned and mindless creature can feel.<br>Beastmaster's scourge. A model wielding the Whip of Agony always strikes with Strength 5. No other modifiers or magic items can ever modify this."
+    },
+    {
+        "name": "Soulrender",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "When it was forged, this long blade was quenched in a Cauldron of Blood and can slice through steel as easily as bone.<br>Great weapon. Armour piercing."
+    },
+    {
+        "name": "Armour of Living Death",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 60,
+        "image": "",
+        "description": "It is claimed that anyone wearing this armour cannot die, sustained by its magical energy. Unfortunately, they cannot remove the armour and are driven insane by its magic.<br>Heavy armour. In addition, the model has +1 Toughness and +1 Wound. Roll a D6 before deploying any models. On a roll of a 1, the wearer succumbs to the Armour of Living Death and is subject to stupidity for the battle."
+    },
+    {
+        "name": "Armour of Eternal Servitude",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Oaths of loyalty and dedication to Khaine were sworn at the time of the armour's forging, and the wearer is granted extended life to serve their god.<br>Heavy armour. The wearer can Regenerate."
+    },
+    {
+        "name": "Cloak of Hag Graef",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Made from the scales of Aggraunir, the first sea dragon to be captured by the Dark Elves, the Cloak of Hag Graef can withstand the harshest of blows.<br>Sea Dragon cloak. In addition, any ranged attack hits on the character (including shooting, magic missiles and other spells with a Strength value) have their Strength halved before rolling to wound (rounding up)."
+    },
+    {
+        "name": "Armour of Darkness",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Forged from black meteoric steel, this suit is almost impossible to pierce.<br>This armour gives a total save of 1+ that cannot be further increased in any way (with a shield, chariot, mount and so on)."
+    },
+    {
+        "name": "Shield of Ghrond",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Shaped into the leering face of an Ice Daemon, the shield of Ghrond is imbued with the power of the magical North wind, which robs attacks of their force.<br>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength."
+    },
+    {
+        "name": "Blood Armour",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "When anointed with the blood of the foe, this armour becomes ever more endurable.<br>Heavy armour. For every unsaved wound the wearer inflicts in close combat, this save is improved by one point (to 4+ then 3+, etc) to a maximum total of 1+ (including any other bonuses for a shield, Sea Dragon cloak, and so on)."
+    },
+    {
+        "name": "Black Amulet",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 70,
+        "image": "",
+        "description": "Cast from the heartstone of a mountain tainted with the power of Dark Sorcery, the Black Amulet is a lustrous polished stone of midnight hue, engraved with a single glowing rune.<br>The wearer has a 4+ ward save. If the wearer of the Black Amulet passes their ward save in close combat, then the attacking model suffers 1 wound instead (with no armour save allowed)."
+    },
+    {
+        "name": "Ring of Darkness",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 40,
+        "image": "",
+        "description": "Billowing black smoke emerges from the opal set into this ring, clouding the wearer's position.<br>All close combat attacks directed against the model are at half WS. Any shooting at the character or their unit is at half BS. Round fractions up."
+    },
+    {
+        "name": "Pendant of Khaeleth",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Worn by the first High Mistress of the Dark Convent, this amulet's protective aura grows greater the stronger the blow landed upon it.<br>This gives a ward save, based upon the Strength of the hit. Roll a D6 for every wound suffered by the wearer, on a roll equal to or under the attack's Strength, the hit is ignored. Rolls of 6 always fail."
+    },
+    {
+        "name": "Seal of Ghrond",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 30,
+        "image": "",
+        "description": "This iron seal is blessed by the priestesses of Khaine to ward away hated magic.<br>Add 1 dice to the dispel dice pool."
+    },
+    {
+        "name": "Pearl of Infinite Bleakness",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Swirled with red and black veins, this magical pearl emits an aura of soul-numbing depression.<br>The character and his unit are Immune to Psychology."
+    },
+    {
+        "name": "Ring of Hotek",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Hotek the renegade priest of Vaul made this ring to protect himself from the magical forces used in the forging of his artefacts.<br>Any Wizard (friend or foe) attempting to cast or target a spell within 12\" of the wearer will suffer a Miscast on the roll of any double."
+    },
+    {
+        "name": "Null Talisman",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "These silver pendants ward away the energy of Chaos.<br>The Null Talisman grants magic resistance (1). Models may carry multiple Null Talismans, just like scrolls, and their effects are cumulative. For example, two Talismans confer magic resistance (2)."
+    },
+    {
+        "name": "Black Staff",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 55,
+        "image": "",
+        "description": "A Black Staff is the much-desired talisman of one of the six High Mistresses of the Convent of Sorceresses.<br>Bound Spell, Power Level 4. Contains the Power of Darkness spell (page 63)."
+    },
+    {
+        "name": "Focus Familiar",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "An impish familiar accompanies the Sorceress, through which she can direct her powers. This allows her to target enemies further away and out of sight.<br>The Focus Familiar allows the wielder to cast spells from a different position on the battlefield. Place a marker at the start of each Dark Elf Magic phase within 6\" of the Sorceress and at least 1\" away from enemies. She may use this position when determining range and line of sight for her spells, and whether she counts as in combat or not."
+    },
+    {
+        "name": "Darkstar Cloak",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Woven into the fabric of this cloak is the essence of a star stolen from the night sky of Nagarythe.<br>The cloak gives the Sorceress +1 power dice in each Magic phase. Only she may use this extra dice."
+    },
+    {
+        "name": "Sacrificial Dagger",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "Bound with enchantments of bloodletting and spirit-binding, the sacrificial dagger is used to leech the life force from its victims and channel it into raw magic.<br>Once per spell-casting attempt, after the casting dice have been rolled, the Sorceress may sacrifice a model in a unit she has joined – the model is removed immediately. The Sorceress gains a power dice that must be rolled and added to the casting total (before dispel attempts). Note that it is possible for the unit to require a panic test if she sacrifices 25+% of the unit in a single Magic Phase!"
+    },
+    {
+        "name": "Tome of Furion",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "The Dark Elf Furion of Clar Karond inscribed this book onto sheets of flayed Orcskin to teach the Path of Darkness to the uninitiated.<br>The Tome of Furion grants its bearer 1 additional spell."
+    },
+    {
+        "name": "Banner of Nagarythe",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 125,
+        "image": "",
+        "description": "The Banner of Nagarythe, the standard of Northern Ulthuan that now lies beneath the ocean, is the personal banner of the Witch King, proclaiming his reign over the Elven Kingdoms.<br>This standard gives an additional +1 to the combat resolution score of friendly units in combat within 12\", and the unit containing the banner is Unbreakable."
+    },
+    {
+        "name": "Hydra Banner",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 75,
+        "image": "",
+        "description": "Imbued with the magic of Hekarti the Hydra Queen, this banner quickens the reflexes so that those nearby strike with her own speed and savagery.<br>All models in the unit gain +1 Attack in the first round of any hand-to-hand combat (including mounts)."
+    },
+    {
+        "name": "Dread Banner",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 40,
+        "image": "",
+        "description": "Such is the supernatural fear instilled by the visage of the Bloody Handed God upon this standard that few dare to even look at it.<br>The unit carrying this standard causes Fear."
+    },
+    {
+        "name": "Standard of Slaughter",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Anointed with the blood of an Ulthuan Elf, this banner imbues its regiment with a bitter determination.<br>On any turn the unit with the Standard of Slaughter charges, the banner adds +D3 to the unit's combat resolution."
+    },
+    {
+        "name": "Standard of Hag Graef",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 35,
+        "image": "",
+        "description": "Under the mystical influence of this serpentine banner, warriors strike with astounding speed.<br>All models in the unit containing the Standard of Hag Graef gain the Always Strikes First rule."
+    },
+    {
+        "name": "Sea Serpent Standard (Corsairs only)",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "The legendary standard of Kaldour the Visionary, this banner carries the device of a monstrous serpent.<br>The unit is subject to the rules for Frenzy."
+    },
+    {
+        "name": "Banner of Murder",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 25,
+        "image": "",
+        "description": "This standard is steeped in the blood of sacrificial victims, its murderous aura instilling a thirst for death and carnage in those carrying it aloft.<br>A unit with the Banner of Murder gains the Armour Piercing rule."
+    },
+    {
+        "name": "Banner of Cold Blood (One use only)",
+        "category": "magic_item",
+        "type": "",
+        "pointsCost": 15,
+        "image": "",
+        "description": "Soaked in the blood of slaughtered Lizardmen, the presence of the Banner of Cold Blood imbues those who carry it with cold-blooded discipline.<br>Announce that the unit is using the banner at the start of any player turn. For the duration of that turn, the unit containing the banner takes any Leadership tests on 3D6 and the Dark Elves player discards the highest D6 roll before comparing the score to the unit's Leadership value."
     }
 ]
