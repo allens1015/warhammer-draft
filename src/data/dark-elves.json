@@ -472,6 +472,7 @@
         "type": "arcane_item",
         "pointsCost": 25,
         "image": "",
+        "repeatable": true,
         "description": "Arcane; one use only; Automatically dispel an enemy spell."
     },
     {
@@ -480,6 +481,7 @@
         "type": "arcane_item",
         "pointsCost": 20,
         "image": "",
+        "repeatable": true,
         "description": "Arcane; one use only; +2 dice to cast a spell."
     },
     {
@@ -864,6 +866,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 30,
         "image": "",
+        "repeatable": true,
         "description": "These are a particular type of throwing star, with wickedly curved edges that tear through flesh and leave a deeply lacerated wound.<br>Maximum Range: 12\"; Strength: As user+1.<br>Rules: Thrown weapon; multiple shot x3."
     },
     {
@@ -872,6 +875,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 30,
         "image": "",
+        "repeatable": true,
         "description": "The sinuous Dance of Doom can be used to dodge the fastest shot or blow.<br>The model has a 5+ ward save."
     },
     {
@@ -880,6 +884,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 30,
         "image": "",
+        "repeatable": true,
         "description": "The Adepts of Death school the servants of Khaine to learn the points on a body that kill instantly.<br>The model has killing blow."
     },
     {
@@ -888,6 +893,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 25,
         "image": "",
+        "repeatable": true,
         "description": "The Hag Queens burn the rune of the Lord of Murder upon the brow of the most zealous of killers.<br>The model has +D3 Attacks (rolled just before making the model's attacks)."
     },
     {
@@ -896,6 +902,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 25,
         "image": "",
+        "repeatable": true,
         "description": "Witchbrew is distilled from blood by the Hag Queens. It drives Witch Elves into such an ecstasy of destruction that they will fight on against impossible odds.<br>Witchbrew affects the Hag's unit for the entire battle. Enemy units cannot claim combat resolution bonuses for outnumbering, flank or rear attacks, or higher ground if they are only fighting a unit affected by Witchbrew."
     },
     {
@@ -904,6 +911,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 15,
         "image": "",
+        "repeatable": true,
         "description": "Tracing a complex pattern in the air, the Dark Elf entrances his victim, leaving him vulnerable and open to attack.<br>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1). Against mounted models, the Dark Elves player must choose either the mount or the rider. If the model has special types of attack (a Giant, for example) the Hand of Khaine has no effect. Models that are Immune to Psychology are unaffected by the Hand of Khaine."
     },
     {
@@ -912,6 +920,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 10,
         "image": "",
+        "repeatable": true,
         "description": "By screeching one of the seventeen secret names of Khaine, the warrior freezes enemies with horror.<br>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by 1 (to a minimum of 1) for that Close Combat."
     },
     {
@@ -936,6 +945,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 25,
         "image": "",
+        "repeatable": true,
         "description": "Manbane is one of the most lethal venoms ever devised, causing even the tiniest wound to bleed openly and profusely.<br>A model with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. This means that they almost always wound opponents on a roll of 3+. This modified Strength is used to calculate armour save modifiers."
     },
     {
@@ -944,6 +954,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 20,
         "image": "",
+        "repeatable": true,
         "description": "Black Lotus has a terrifying effect on living flesh, driving victims delusional and insane.<br>The model may re-roll any dice that score a 1 when rolling to wound with a weapon coated with Black Lotus."
     },
     {
@@ -952,6 +963,7 @@
         "type": "gifts_of_khaine",
         "pointsCost": 10,
         "image": "",
+        "repeatable": true,
         "description": "A weapon treated with Dark Venom will cause a mortal wound if it merely scratches the skin, causing the poisoned victim to die in the most grotesque manner imaginable.<br>If a model with Dark Venom slays an enemy in a challenge, all wounds inflicted by the model in the challenge that round are doubled for the purposes of combat resolution scores (up to the overkill maximum)."
     }
 ]
