@@ -264,7 +264,7 @@
         ]
     },
     {
-        "name": "Dark Elf Warriors (5)",
+        "name": "Dark Elf Warriors",
         "category": "core",
         "type": "model",
         "pointsCost": 30,
@@ -273,7 +273,7 @@
         "description": ""
     },
     {
-        "name": "Dark Elf Repeater Crossbowmen (5)",
+        "name": "Dark Elf Repeater Crossbowmen",
         "category": "core",
         "type": "model",
         "pointsCost": 50,
@@ -282,7 +282,7 @@
         "description": ""
     },
     {
-        "name": "Black Ark Corsairs (5)",
+        "name": "Black Ark Corsairs",
         "category": "core",
         "type": "model",
         "pointsCost": 50,
@@ -291,7 +291,7 @@
         "description": ""
     },
     {
-        "name": "Dark Riders (5)",
+        "name": "Dark Riders",
         "category": "core",
         "type": "model",
         "pointsCost": 85,
@@ -300,7 +300,7 @@
         "description": ""
     },
     {
-        "name": "Harpies (5)",
+        "name": "Harpies",
         "category": "core",
         "type": "model",
         "pointsCost": 55,
@@ -318,7 +318,7 @@
         "description": ""
     },
     {
-        "name": "Witch Elves (5)",
+        "name": "Witch Elves",
         "category": "special",
         "type": "model",
         "pointsCost": 50,
@@ -327,7 +327,7 @@
         "description": ""
     },
     {
-        "name": "Shades (5)",
+        "name": "Shades",
         "category": "special",
         "type": "model",
         "pointsCost": 80,
@@ -336,26 +336,27 @@
         "description": ""
     },
     {
-        "name": "Har Ganeth Executioners (5)",
+        "name": "Har Ganeth Executioners",
         "category": "special",
         "type": "model",
         "pointsCost": 60,
         "count": 5,
         "image": "",
-        "description": ""
-    },
-    {
-        "name": "Har Ganeth Executioners (5, Tullaris)",
-        "category": "special",
-        "type": "model",
-        "pointsCost": 155,
-        "count": 5,
-        "image": "",
         "description": "",
-        "repeatable": false
+        "choices": [
+            {
+                "name": "Har Ganeth Executioners",
+                "pointsCost": 60
+            },
+            {
+                "name": "Har Ganeth Executioners (Tullaris)",
+                "pointsCost": 155,
+                "repeatable": false
+            }
+        ]
     },
     {
-        "name": "Cold One Knights (5)",
+        "name": "Cold One Knights",
         "category": "special",
         "type": "model",
         "pointsCost": 135,
@@ -373,23 +374,24 @@
         "description": ""
     },
     {
-        "name": "Black Guard of Naggarond (5)",
+        "name": "Black Guard of Naggarond",
         "category": "special",
         "type": "model",
         "pointsCost": 65,
         "count": 5,
         "image": "",
-        "description": ""
-    },
-    {
-        "name": "Black Guard of Naggarond (5, Kouran)",
-        "category": "special",
-        "type": "model",
-        "pointsCost": 140,
-        "count": 5,
-        "image": "",
         "description": "",
-        "repeatable": false
+        "choices": [
+            {
+                "name": "Black Guard of Naggarond",
+                "pointsCost": 65
+            },
+            {
+                "name": "Black Guard of Naggarond (Kouran)",
+                "pointsCost": 140,
+                "repeatable": false
+            }
+        ]
     },
     {
         "name": "Reaper Bolt Thrower",

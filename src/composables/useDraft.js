@@ -19,6 +19,23 @@ export function useDraft() {
     armyList.value.reduce((sum, u) => sum + u.pointsCost, 0)
   )
 
+  const groupedArmyList = computed(() => {
+    const groups = new Map()
+    for (const unit of armyList.value) {
+      if (groups.has(unit.name)) {
+        const g = groups.get(unit.name)
+        g.pointsCost += unit.pointsCost
+        g.totalCount += unit.count ?? 1
+      } else {
+        groups.set(unit.name, { ...unit, totalCount: unit.count ?? 1 })
+      }
+    }
+    return Array.from(groups.values()).map(g => ({
+      ...g,
+      displayName: g.count > 1 ? `${g.name} (${g.totalCount})` : g.name,
+    }))
+  })
+
   const pointsThreshold = computed(() =>
     pointsCap.value - settings.pointsThresholdOffset
   )
@@ -26,14 +43,13 @@ export function useDraft() {
   const overThreshold = computed(() => pointsTotal.value >= pointsThreshold.value)
 
   const slots = computed(() => {
-    let lord = 0, hero = 0, special = 0
+    let lord = 0, hero = 0
     const rareCounts = {}
 
     for (const pick of armyList.value) {
       const su = pick.slotsUsed ?? { [pick.category]: 1 }
       lord += su.lord ?? 0
       hero += su.hero ?? 0
-      if (pick.category === 'special') special++
       if (pick.category === 'rare') {
         rareCounts[pick._baseName] = (rareCounts[pick._baseName] ?? 0) + 1
       }
@@ -45,7 +61,7 @@ export function useDraft() {
       rare += Math.ceil(count / (unit?.maxPerSlot ?? 1))
     }
 
-    return { lord, character: lord + hero, special, rare }
+    return { lord, character: lord + hero, rare }
   })
 
   function resolveUnit(unit) {
@@ -64,6 +80,7 @@ export function useDraft() {
       const selected = unit.choices[Math.floor(Math.random() * unit.choices.length)]
       resolved.name = selected.name
       resolved.pointsCost = selected.pointsCost
+      if (selected.repeatable !== undefined) resolved.repeatable = selected.repeatable
     }
 
     return resolved
@@ -139,11 +156,21 @@ export function useDraft() {
       used.add(unit._baseName)
     }
 
-    // Slots 1 & 2: weighted random
-    for (let i = 0; i < 2; i++) {
+    // Slot 1: core or special only, fallback to weighted random
+    {
+      const coreSpecial = tiersWithAvailable(['core', 'special'].filter(t => eligibleTiers.includes(t)), used)
+      if (coreSpecial.length) {
+        addOption(pickFromTier(weightedTierPick(coreSpecial), used))
+      } else {
+        const available = tiersWithAvailable(eligibleTiers, used)
+        if (available.length) addOption(pickFromTier(weightedTierPick(available), used))
+      }
+    }
+
+    // Slot 2: weighted random
+    {
       const available = tiersWithAvailable(eligibleTiers, used)
-      if (!available.length) break
-      addOption(pickFromTier(weightedTierPick(available), used))
+      if (available.length) addOption(pickFromTier(weightedTierPick(available), used))
     }
 
     // Slot 3: 50/50 character or magic, fallback to weighted random
@@ -204,6 +231,7 @@ export function useDraft() {
   return {
     pointsCap,
     armyList,
+    groupedArmyList,
     currentOptions,
     pointsTotal,
     pointsThreshold,

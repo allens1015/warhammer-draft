@@ -24,7 +24,7 @@ const emit = defineEmits(['update:pointsCap', 'reset'])
     <div class="composition-info">
       <span>Lords: {{ slots.lord }} / {{ composition.maxLords }}</span>
       <span>Characters: {{ slots.character }} / {{ composition.maxCharacters }}</span>
-      <span>Special: {{ slots.special }} / {{ composition.maxSpecial }}</span>
+      <span>Max Special: {{ composition.maxSpecial }}</span>
       <span>Rare: {{ slots.rare }} / {{ composition.maxRare }}</span>
     </div>
     <button @click="emit('reset')">Reset Draft</button>
