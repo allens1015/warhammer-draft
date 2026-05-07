@@ -17,7 +17,7 @@ const emit = defineEmits(['update:pointsCap', 'reset'])
         :value="pointsCap"
         min="500"
         max="4000"
-        step="500"
+        step="250"
         class="w-28 px-3 py-1.5 rounded-md border border-border bg-input-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         @change="emit('update:pointsCap', Number($event.target.value))"
       />

@@ -1,5 +1,21 @@
 <script setup>
-defineProps({
+import imgCore    from '../assets/core.png'
+import imgHero    from '../assets/hero.jpg'
+import imgLord    from '../assets/lord.jpg'
+import imgMagic   from '../assets/magic-item.jpg'
+import imgRare    from '../assets/rare.jpg'
+import imgSpecial from '../assets/special.jpg'
+
+const CATEGORY_IMAGES = {
+  core:    imgCore,
+  hero:    imgHero,
+  lord:    imgLord,
+  magic:   imgMagic,
+  rare:    imgRare,
+  special: imgSpecial,
+}
+
+const props = defineProps({
   option: Object,
 })
 
@@ -12,9 +28,9 @@ const emit = defineEmits(['pick'])
     @click="emit('pick', option)"
   >
     <div
-      v-if="option.image"
-      class="absolute inset-0 bg-cover bg-center"
-      :style="{ backgroundImage: `url(${option.image})` }"
+      v-if="CATEGORY_IMAGES[option.category]"
+      class="absolute inset-0 bg-cover bg-center opacity-60"
+      :style="{ backgroundImage: `url(${CATEGORY_IMAGES[option.category]})` }"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
     <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
