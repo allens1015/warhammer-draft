@@ -26,13 +26,18 @@ export function useDraft() {
         const g = groups.get(unit.name)
         g.pointsCost += unit.pointsCost
         g.totalCount += unit.count ?? 1
+        g.qty++
       } else {
-        groups.set(unit.name, { ...unit, totalCount: unit.count ?? 1 })
+        groups.set(unit.name, { ...unit, totalCount: unit.count ?? 1, qty: 1 })
       }
     }
     return Array.from(groups.values()).map(g => ({
       ...g,
-      displayName: g.count > 1 ? `${g.name} (${g.totalCount})` : g.name,
+      displayName: g.count > 1
+        ? `${g.name} (${g.totalCount})`
+        : g.qty > 1
+          ? `${g.name} (${g.qty})`
+          : g.name,
     }))
   })
 
@@ -156,39 +161,11 @@ export function useDraft() {
       used.add(unit._baseName)
     }
 
-    // Slot 1: core or special only, fallback to weighted random
-    {
-      const coreSpecial = tiersWithAvailable(['core', 'special'].filter(t => eligibleTiers.includes(t)), used)
-      if (coreSpecial.length) {
-        addOption(pickFromTier(weightedTierPick(coreSpecial), used))
-      } else {
-        const available = tiersWithAvailable(eligibleTiers, used)
-        if (available.length) addOption(pickFromTier(weightedTierPick(available), used))
-      }
-    }
-
-    // Slot 2: weighted random
-    {
+    // Slots 1-3: unrestricted weighted random
+    for (let i = 0; i < 3; i++) {
       const available = tiersWithAvailable(eligibleTiers, used)
-      if (available.length) addOption(pickFromTier(weightedTierPick(available), used))
-    }
-
-    // Slot 3: 50/50 character or magic, fallback to weighted random
-    {
-      const charPool = eligibleUnitsInTier('character').filter(u => !used.has(u.name))
-      const magicPool = eligibleUnitsInTier('magic').filter(u => !used.has(u.name))
-
-      if (charPool.length && magicPool.length) {
-        const pool = Math.random() < 0.5 ? charPool : magicPool
-        addOption(resolveUnit(pool[Math.floor(Math.random() * pool.length)]))
-      } else if (magicPool.length) {
-        addOption(resolveUnit(magicPool[Math.floor(Math.random() * magicPool.length)]))
-      } else if (charPool.length) {
-        addOption(resolveUnit(charPool[Math.floor(Math.random() * charPool.length)]))
-      } else {
-        const available = tiersWithAvailable(eligibleTiers, used)
-        if (available.length) addOption(pickFromTier(weightedTierPick(available), used))
-      }
+      if (!available.length) break
+      addOption(pickFromTier(weightedTierPick(available), used))
     }
 
     // Slot 4: magic, fallback to weighted random
