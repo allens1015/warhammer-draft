@@ -20,20 +20,22 @@ const {
 </script>
 
 <template>
-  <div class="app">
-    <SettingsPanel
-      v-model:pointsCap="pointsCap"
-      :composition="composition"
-      :slots="slots"
-      @reset="reset"
-    />
-    <DrawPanel
-      :options="currentOptions"
-      @pick="pick"
-    />
-    <ArmyList
-      :list="listJson"
-      :over-threshold="overThreshold"
-    />
+  <div class="min-h-screen bg-neutral-50 p-8">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <SettingsPanel
+        v-model:pointsCap="pointsCap"
+        :composition="composition"
+        :slots="slots"
+        @reset="reset"
+      />
+      <DrawPanel
+        :options="currentOptions"
+        @pick="pick"
+      />
+      <ArmyList
+        :list="listJson"
+        :over-threshold="overThreshold"
+      />
+    </div>
   </div>
 </template>

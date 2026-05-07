@@ -9,8 +9,8 @@ const emit = defineEmits(['update:pointsCap', 'reset'])
 </script>
 
 <template>
-  <div class="settings-panel">
-    <label>
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <label class="flex items-center gap-2 text-sm text-muted-foreground">
       Points Cap
       <input
         type="number"
@@ -18,15 +18,23 @@ const emit = defineEmits(['update:pointsCap', 'reset'])
         min="500"
         max="4000"
         step="500"
+        class="w-28 px-3 py-1.5 rounded-md border border-border bg-input-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         @change="emit('update:pointsCap', Number($event.target.value))"
       />
     </label>
-    <div class="composition-info">
+
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
       <span>Lords: {{ slots.lord }} / {{ composition.maxLords }}</span>
       <span>Characters: {{ slots.character }} / {{ composition.maxCharacters }}</span>
       <span>Max Special: {{ composition.maxSpecial }}</span>
       <span>Rare: {{ slots.rare }} / {{ composition.maxRare }}</span>
     </div>
-    <button @click="emit('reset')">Reset Draft</button>
+
+    <button
+      class="px-4 py-2 text-sm border border-border rounded-md hover:bg-accent transition-colors"
+      @click="emit('reset')"
+    >
+      Reset Draft
+    </button>
   </div>
 </template>

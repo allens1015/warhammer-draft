@@ -9,7 +9,7 @@ const emit = defineEmits(['pick'])
 </script>
 
 <template>
-  <div class="draw-panel">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <DrawOption
       v-for="option in options"
       :key="option._baseName + option.name"
