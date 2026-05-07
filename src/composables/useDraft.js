@@ -4,6 +4,18 @@ import settings from '../data/settings.json'
 
 const TIER_WEIGHTS = { core: 35, special: 25, character: 20, rare: 10, magic: 10 }
 
+const CATEGORY_ORDER = ['lord', 'hero', 'core', 'special', 'rare', 'magic']
+const CATEGORY_LABELS = {
+  lord: 'Lords', hero: 'Heroes', core: 'Core',
+  special: 'Special', rare: 'Rare', magic: 'Magic Items',
+}
+const MAGIC_TYPE_ORDER = ['magic_weapon', 'magic_armour', 'talisman', 'arcane_item', 'enchanted_item', 'magic_standard', 'gifts_of_khaine']
+const MAGIC_TYPE_LABELS = {
+  magic_weapon: 'Magic Weapons', magic_armour: 'Magic Armour', talisman: 'Talismans',
+  arcane_item: 'Arcane Items', enchanted_item: 'Enchanted Items',
+  magic_standard: 'Magic Standards', gifts_of_khaine: 'Gifts of Khaine',
+}
+
 export function useDraft() {
   const pointsCap = ref(settings.pointsCapDefault)
   const armyList = ref([])
@@ -40,6 +52,27 @@ export function useDraft() {
           : g.name,
     }))
   })
+
+  const listJson = computed(() => ({
+    pointsCap: pointsCap.value,
+    pointsTotal: pointsTotal.value,
+    sections: CATEGORY_ORDER
+      .map(cat => {
+        const units = groupedArmyList.value
+          .filter(u => u.category === cat)
+          .map(({ displayName, name, category, type, pointsCost, qty, totalCount }) =>
+            ({ displayName, name, category, type, pointsCost, qty, totalCount })
+          )
+        if (!units.length) return null
+        const subsections = cat === 'magic'
+          ? MAGIC_TYPE_ORDER
+              .map(t => ({ label: MAGIC_TYPE_LABELS[t], units: units.filter(u => u.type === t) }))
+              .filter(s => s.units.length > 0)
+          : null
+        return { label: CATEGORY_LABELS[cat], units: subsections ? [] : units, subsections }
+      })
+      .filter(Boolean),
+  }))
 
   const pointsThreshold = computed(() =>
     pointsCap.value - settings.pointsThresholdOffset
@@ -209,6 +242,7 @@ export function useDraft() {
     pointsCap,
     armyList,
     groupedArmyList,
+    listJson,
     currentOptions,
     pointsTotal,
     pointsThreshold,

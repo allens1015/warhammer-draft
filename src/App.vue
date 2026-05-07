@@ -7,7 +7,7 @@ import SettingsPanel from './components/SettingsPanel.vue'
 const {
   pointsCap,
   armyList,
-  groupedArmyList,
+  listJson,
   currentOptions,
   pointsTotal,
   pointsThreshold,
@@ -32,10 +32,7 @@ const {
       @pick="pick"
     />
     <ArmyList
-      :army-list="groupedArmyList"
-      :points-total="pointsTotal"
-      :points-cap="pointsCap"
-      :points-threshold="pointsThreshold"
+      :list="listJson"
       :over-threshold="overThreshold"
     />
   </div>
