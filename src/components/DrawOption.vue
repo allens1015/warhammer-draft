@@ -7,6 +7,8 @@ import imgMagic   from '../assets/magic-item.jpg'
 import imgRare    from '../assets/rare.jpg'
 import imgSpecial from '../assets/special.jpg'
 
+import { MAGIC_TYPE_LABELS } from '../composables/draftConfig.js'
+
 const CATEGORY_IMAGES = {
   core:    imgCore,
   hero:    imgHero,
@@ -48,6 +50,11 @@ const emit = defineEmits(['pick'])
         {{ option.count > 1 ? `${option.name} (${option.count})` : option.name }}
         <Info v-if="option.description" class="w-3 h-3 shrink-0" />
       </h3>
+      <h4
+        v-if="option.category === 'magic'"
+        class="font-small leading-tight flex items-center gap-1.5">
+        {{ MAGIC_TYPE_LABELS[option.type] }}
+      </h4>
       <div class="text-sm opacity-80 mt-0.5">{{ option.pointsCost }} pts</div>
     </div>
   </button>
