@@ -65,9 +65,8 @@ function copyToClipboard() {
                 <span
                   v-if="unit.description"
                   class="absolute left-0 top-6 w-64 p-3 bg-neutral-900 text-white text-xs rounded-md opacity-0 pointer-events-none group-hover/tooltip:opacity-100 transition-opacity z-10 shadow-lg"
-                >
-                  {{ unit.description }}
-                </span>
+                  v-html="unit.description"
+                />
               </span>
               <button
                 class="p-1 opacity-0 group-hover:opacity-100 hover:bg-neutral-200 rounded transition-all shrink-0"
@@ -92,9 +91,8 @@ function copyToClipboard() {
             <span
               v-if="unit.description"
               class="absolute left-0 top-6 w-64 p-3 bg-neutral-900 text-white text-xs rounded-md opacity-0 pointer-events-none group-hover/tooltip:opacity-100 transition-opacity z-10 shadow-lg"
-            >
-              {{ unit.description }}
-            </span>
+              v-html="unit.description"
+            />
           </span>
           <button
             class="p-1 opacity-0 group-hover:opacity-100 hover:bg-neutral-200 rounded transition-all shrink-0"

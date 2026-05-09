@@ -39,9 +39,8 @@ const emit = defineEmits(['pick'])
     <div
       v-if="option.description"
       class="absolute top-3 left-3 right-3 p-3 bg-neutral-900/95 text-white text-xs rounded-md opacity-0 group-hover/card:opacity-100 transition-opacity pointer-events-none z-10"
-    >
-      {{ option.description }}
-    </div>
+      v-html="option.description"
+    />
 
     <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
       <div class="text-xs uppercase tracking-wide opacity-70 mb-1">{{ option.category }}</div>

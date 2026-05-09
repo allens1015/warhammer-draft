@@ -1,22 +1,25 @@
 <script setup>
+import { ARMIES } from '../composables/useDraft.js'
+
 defineProps({
   pointsCap: Number,
   composition: Object,
   slots: Object,
+  selectedArmy: String,
 })
 
-const emit = defineEmits(['update:pointsCap', 'reset'])
-
-const armies = ['Dark Elves']
+const emit = defineEmits(['update:pointsCap', 'reset', 'army-change'])
 </script>
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-4">
     <div class="flex items-center gap-3">
       <select
+        :value="selectedArmy"
         class="px-3 py-1.5 rounded-md border border-border bg-white text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+        @change="emit('army-change', $event.target.value)"
       >
-        <option v-for="army in armies" :key="army" :value="army">{{ army }}</option>
+        <option v-for="army in ARMIES" :key="army.key" :value="army.key">{{ army.label }}</option>
       </select>
 
       <label class="flex items-center gap-2 text-sm text-muted-foreground">

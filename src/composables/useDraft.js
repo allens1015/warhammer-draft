@@ -1,6 +1,14 @@
 import { ref, computed } from 'vue'
-import units from '../data/dark-elves.json'
+import darkElvesUnits from '../data/dark-elves.json'
+import skavenUnits from '../data/skaven.json'
 import settings from '../data/settings.json'
+
+const ARMY_DATA = {
+  'dark-elves': { label: 'Dark Elves', units: darkElvesUnits },
+  'skaven': { label: 'Skaven', units: skavenUnits },
+}
+
+export const ARMIES = Object.entries(ARMY_DATA).map(([key, { label }]) => ({ key, label }))
 
 const TIER_WEIGHTS = { core: 35, special: 25, character: 20, rare: 10, magic: 10 }
 
@@ -17,9 +25,12 @@ const MAGIC_TYPE_LABELS = {
 }
 
 export function useDraft() {
+  const selectedArmy = ref('dark-elves')
+  const activeUnits = computed(() => ARMY_DATA[selectedArmy.value].units)
+
   const pointsCap = ref(settings.pointsCapDefault)
   const armyList = ref([])
-  const drawPool = ref([...units])
+  const drawPool = ref([...activeUnits.value])
   const currentOptions = ref([])
 
   const composition = computed(() =>
@@ -95,7 +106,7 @@ export function useDraft() {
 
     let rare = 0
     for (const [baseName, count] of Object.entries(rareCounts)) {
-      const unit = units.find(u => u.name === baseName)
+      const unit = activeUnits.value.find(u => u.name === baseName)
       rare += Math.ceil(count / (unit?.maxPerSlot ?? 1))
     }
 
@@ -244,7 +255,7 @@ export function useDraft() {
     if (isNonRepeatable) {
       const stillInList = armyList.value.some(u => u._baseName === removed._baseName)
       if (!stillInList) {
-        const original = units.find(u => u.name === removed._baseName)
+        const original = activeUnits.value.find(u => u.name === removed._baseName)
         if (original && !drawPool.value.some(u => u.name === removed._baseName)) {
           drawPool.value.push(original)
         }
@@ -254,15 +265,23 @@ export function useDraft() {
     draw()
   }
 
+  function switchArmy(key) {
+    selectedArmy.value = key
+    armyList.value = []
+    drawPool.value = [...activeUnits.value]
+    draw()
+  }
+
   function reset() {
     armyList.value = []
-    drawPool.value = [...units]
+    drawPool.value = [...activeUnits.value]
     draw()
   }
 
   draw()
 
   return {
+    selectedArmy,
     pointsCap,
     armyList,
     groupedArmyList,
@@ -276,5 +295,6 @@ export function useDraft() {
     pick,
     remove,
     reset,
+    switchArmy,
   }
 }

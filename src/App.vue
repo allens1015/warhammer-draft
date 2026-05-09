@@ -5,6 +5,7 @@ import ArmyList from './components/ArmyList.vue'
 import SettingsPanel from './components/SettingsPanel.vue'
 
 const {
+  selectedArmy,
   pointsCap,
   armyList,
   listJson,
@@ -17,6 +18,7 @@ const {
   pick,
   remove,
   reset,
+  switchArmy,
 } = useDraft()
 </script>
 
@@ -25,9 +27,11 @@ const {
     <div class="max-w-6xl mx-auto space-y-8">
       <SettingsPanel
         v-model:pointsCap="pointsCap"
+        :selected-army="selectedArmy"
         :composition="composition"
         :slots="slots"
         @reset="reset"
+        @army-change="switchArmy"
       />
       <DrawPanel
         :options="currentOptions"
