@@ -25,6 +25,10 @@ const {
 <template>
   <div class="min-h-screen bg-neutral-50 p-8">
     <div class="max-w-6xl mx-auto space-y-8">
+      <DrawPanel
+        :options="currentOptions"
+        @pick="pick"
+      />
       <SettingsPanel
         v-model:pointsCap="pointsCap"
         :selected-army="selectedArmy"
@@ -32,10 +36,6 @@ const {
         :slots="slots"
         @reset="reset"
         @army-change="switchArmy"
-      />
-      <DrawPanel
-        :options="currentOptions"
-        @pick="pick"
       />
       <ArmyList
         :list="listJson"
