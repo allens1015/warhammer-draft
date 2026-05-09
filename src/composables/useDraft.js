@@ -2,6 +2,8 @@ import { ref, computed } from 'vue'
 import darkElvesUnits from '../data/dark-elves.json'
 import skavenUnits from '../data/skaven.json'
 import settings from '../data/settings.json'
+import { TIER_WEIGHTS } from './draftConfig.js'
+import { useArmyList } from './useArmyList.js'
 
 const ARMY_DATA = {
   'dark-elves': { label: 'Dark Elves', units: darkElvesUnits },
@@ -9,20 +11,6 @@ const ARMY_DATA = {
 }
 
 export const ARMIES = Object.entries(ARMY_DATA).map(([key, { label }]) => ({ key, label }))
-
-const TIER_WEIGHTS = { core: 35, special: 25, character: 20, rare: 10, magic: 10 }
-
-const CATEGORY_ORDER = ['lord', 'hero', 'core', 'special', 'rare', 'magic']
-const CATEGORY_LABELS = {
-  lord: 'Lords', hero: 'Heroes', core: 'Core',
-  special: 'Special', rare: 'Rare', magic: 'Magic Items',
-}
-const MAGIC_TYPE_ORDER = ['magic_weapon', 'magic_armour', 'talisman', 'arcane_item', 'enchanted_item', 'magic_standard', 'gifts_of_khaine']
-const MAGIC_TYPE_LABELS = {
-  magic_weapon: 'Magic Weapons', magic_armour: 'Magic Armour', talisman: 'Talismans',
-  arcane_item: 'Arcane Items', enchanted_item: 'Enchanted Items',
-  magic_standard: 'Magic Standards', gifts_of_khaine: 'Gifts of Khaine',
-}
 
 export function useDraft() {
   const selectedArmy = ref('dark-elves')
@@ -42,48 +30,7 @@ export function useDraft() {
     armyList.value.reduce((sum, u) => sum + u.pointsCost, 0)
   )
 
-  const groupedArmyList = computed(() => {
-    const groups = new Map()
-    for (const unit of armyList.value) {
-      if (groups.has(unit.name)) {
-        const g = groups.get(unit.name)
-        g.pointsCost += unit.pointsCost
-        g.totalCount += unit.count ?? 1
-        g.qty++
-      } else {
-        groups.set(unit.name, { ...unit, totalCount: unit.count ?? 1, qty: 1 })
-      }
-    }
-    return Array.from(groups.values()).map(g => ({
-      ...g,
-      displayName: g.count > 1
-        ? `${g.name} (${g.totalCount})`
-        : g.qty > 1
-          ? `${g.name} (${g.qty})`
-          : g.name,
-    }))
-  })
-
-  const listJson = computed(() => ({
-    pointsCap: pointsCap.value,
-    pointsTotal: pointsTotal.value,
-    sections: CATEGORY_ORDER
-      .map(cat => {
-        const units = groupedArmyList.value
-          .filter(u => u.category === cat)
-          .map(({ displayName, name, category, type, pointsCost, qty, totalCount, description }) =>
-            ({ displayName, name, category, type, pointsCost, qty, totalCount, description })
-          )
-        if (!units.length) return null
-        const subsections = cat === 'magic'
-          ? MAGIC_TYPE_ORDER
-              .map(t => ({ label: MAGIC_TYPE_LABELS[t], units: units.filter(u => u.type === t) }))
-              .filter(s => s.units.length > 0)
-          : null
-        return { label: CATEGORY_LABELS[cat], units: subsections ? [] : units, subsections }
-      })
-      .filter(Boolean),
-  }))
+  const { groupedArmyList, listJson } = useArmyList(armyList, pointsCap, pointsTotal)
 
   const pointsThreshold = computed(() =>
     pointsCap.value - settings.pointsThresholdOffset

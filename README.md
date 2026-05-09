@@ -1,30 +1,7 @@
 # warhammer-draft
 A list drafting tool for tabletop warhammer of varying flavors
 
-{
-    name: "Dark Elf Warriors",
-    category: "core",
-    image: "image-url",
-    description: "optional",
-    type: "model",
-    count: 5
-}
-
-2 magic
-2 rare
-3 character
-4 special
-6 core
-
-maps to
-
-10 magic
-10 rare
-20 character
-25 special
-35 core
-
-what to do with lord/hero mounts?
+It's time to split up the composable into related chunks
 
 // Standard core/special/rare unit
 { "name": "", "category": "core", "type": "model", "pointsCost": 0, "count": 0, "image": "", "description": "" }
