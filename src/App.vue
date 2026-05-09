@@ -15,6 +15,7 @@ const {
   slots,
   composition,
   pick,
+  remove,
   reset,
 } = useDraft()
 </script>
@@ -35,6 +36,7 @@ const {
       <ArmyList
         :list="listJson"
         :over-threshold="overThreshold"
+        @remove="remove"
       />
     </div>
   </div>

@@ -6,22 +6,32 @@ defineProps({
 })
 
 const emit = defineEmits(['update:pointsCap', 'reset'])
+
+const armies = ['Dark Elves']
 </script>
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-4">
-    <label class="flex items-center gap-2 text-sm text-muted-foreground">
-      Points Cap
-      <input
-        type="number"
-        :value="pointsCap"
-        min="500"
-        max="4000"
-        step="250"
-        class="w-28 px-3 py-1.5 rounded-md border border-border bg-input-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-        @change="emit('update:pointsCap', Number($event.target.value))"
-      />
-    </label>
+    <div class="flex items-center gap-3">
+      <select
+        class="px-3 py-1.5 rounded-md border border-border bg-white text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+      >
+        <option v-for="army in armies" :key="army" :value="army">{{ army }}</option>
+      </select>
+
+      <label class="flex items-center gap-2 text-sm text-muted-foreground">
+        Points Cap
+        <input
+          type="number"
+          :value="pointsCap"
+          min="500"
+          max="4000"
+          step="250"
+          class="w-28 px-3 py-1.5 rounded-md border border-border bg-input-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          @change="emit('update:pointsCap', Number($event.target.value))"
+        />
+      </label>
+    </div>
 
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
       <span>Lords: {{ slots.lord }} / {{ composition.maxLords }}</span>

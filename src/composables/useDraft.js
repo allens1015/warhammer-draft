@@ -60,8 +60,8 @@ export function useDraft() {
       .map(cat => {
         const units = groupedArmyList.value
           .filter(u => u.category === cat)
-          .map(({ displayName, name, category, type, pointsCost, qty, totalCount }) =>
-            ({ displayName, name, category, type, pointsCost, qty, totalCount })
+          .map(({ displayName, name, category, type, pointsCost, qty, totalCount, description }) =>
+            ({ displayName, name, category, type, pointsCost, qty, totalCount, description })
           )
         if (!units.length) return null
         const subsections = cat === 'magic'
@@ -230,6 +230,30 @@ export function useDraft() {
     draw()
   }
 
+  function remove(unitName) {
+    const idx = armyList.value.map(u => u.name).lastIndexOf(unitName)
+    if (idx === -1) return
+
+    const removed = armyList.value[idx]
+    armyList.value.splice(idx, 1)
+
+    const isNonRepeatable =
+      removed.repeatable === false ||
+      (removed.category === 'magic' && removed.repeatable !== true)
+
+    if (isNonRepeatable) {
+      const stillInList = armyList.value.some(u => u._baseName === removed._baseName)
+      if (!stillInList) {
+        const original = units.find(u => u.name === removed._baseName)
+        if (original && !drawPool.value.some(u => u.name === removed._baseName)) {
+          drawPool.value.push(original)
+        }
+      }
+    }
+
+    draw()
+  }
+
   function reset() {
     armyList.value = []
     drawPool.value = [...units]
@@ -250,6 +274,7 @@ export function useDraft() {
     slots,
     composition,
     pick,
+    remove,
     reset,
   }
 }
