@@ -121,3 +121,39 @@ Magic subsection order: Magic Weapons → Magic Armour → Talismans → Arcane 
 ## Future: Save / Load
 
 `listJson` is the intended save format — already serializable. Planned: Supabase (Google OAuth + Postgres) for account-based list persistence. Start with `npx supabase init` + magic-link auth before layering in Google OAuth. Google OAuth on localhost requires a registered redirect URI in Google Cloud Console.
+
+---
+
+## Deployment Target: Drupal 10 Portfolio on Pantheon
+
+This app will be embedded in a Drupal 10 portfolio site (Pantheon) as one of several Vue tools. Drupal is a page shell only — no data exchange. The app is built with Vite and committed into a custom Drupal module.
+
+**Module:** `web/modules/custom/portfolio_tools/`  
+Route: `/tools/warhammer-draft` — renders a Twig template with `<div id="app"></div>` and attaches the built assets as a Drupal library.
+
+**Required Vite config changes:**
+
+```js
+// vite.config.js
+base: process.env.VITE_BASE_URL || '/',
+build: {
+  rollupOptions: {
+    output: {
+      entryFileNames: 'assets/main.js',
+      chunkFileNames: 'assets/[name].js',
+      assetFileNames: 'assets/[name].[ext]',
+    },
+  },
+},
+```
+
+`VITE_BASE_URL` is set to `/modules/custom/portfolio_tools/tools/warhammer-draft/` at build time (GitHub Actions). Local dev uses the default (`/`).
+
+**Local dev workflow:**
+- Active development: `npm run dev` in this repo only. No Drupal needed.
+- Integration testing: build locally with `VITE_BASE_URL` set, copy `dist/assets/` into the Drupal module. Use Lando or DDEV for local Drupal.
+- Deploy: GitHub Actions builds on push → copies assets into Drupal repo → push to Pantheon manually after local verification.
+
+**Auth:** Drupal auth is admin-only (portfolio owner). Supabase auth (future) runs client-side and is completely separate — no interference. OAuth redirect URIs should point to the Drupal-hosted tool URL.
+
+**Images:** Current category images are static imports — Vite bundles them fine. If per-unit images are added, prefer Supabase Storage (already on roadmap) with an `imageUrl` field on unit records. Avoid Git LFS (Pantheon bandwidth quota issues).
