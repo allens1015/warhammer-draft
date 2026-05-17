@@ -65,7 +65,25 @@
     "pointsCost": 90,
     "count": 1,
     "image": "",
-    "description": ""
+    "description": "",
+    "mounts": [
+      {
+        "name": "Warlord (on Foot)",
+        "pointsCost": 90
+      },
+      {
+        "name": "Warlord (on Rat-Ogre Bonebreaker)",
+        "pointsCost": 155
+      },
+      {
+        "name": "Warlord (on War-Litter)",
+        "pointsCost": 125
+      },
+      {
+        "name": "Warlord (on Great Pox Rat)",
+        "pointsCost": 120
+      }
+    ]
   },
   {
     "name": "Grey Seer",
@@ -74,7 +92,18 @@
     "pointsCost": 240,
     "count": 1,
     "image": "",
-    "description": ""
+    "description": "",
+    "mounts": [
+      {
+        "name": "Grey Seer (on Foot)",
+        "pointsCost": 90
+      },
+      {
+        "name": "Grey Seer (on Screaming Bell)",
+        "pointsCost": 155,
+        "repeatable": false
+      }
+    ]
   },
   {
     "name": "The Screaming Bell",
@@ -121,7 +150,25 @@
     "pointsCost": 15,
     "count": 1,
     "image": "",
-    "description": ""
+    "description": "",
+    "choices": [
+      {
+        "name": "Warlock Engineer",
+        "pointsCost": 15
+      },
+      {
+        "name": "Warlock Engineer (level 1)",
+        "pointsCost": 65
+      },
+      {
+        "name": "Warlock Engineer (level 2)",
+        "pointsCost": 100
+      },
+      {
+        "name": "Warlock Engineer (Warplock-Augmented Weapon)",
+        "pointsCost": 60
+      }
+    ]
   },
   {
     "name": "Chieftain",
@@ -139,41 +186,47 @@
     "pointsCost": 100,
     "count": 1,
     "image": "",
-    "description": ""
-  },
-  {
-    "name": "Plague Furnace",
-    "category": "hero",
-    "type": "model",
-    "pointsCost": 150,
-    "count": 1,
-    "image": "",
-    "description": ""
+    "description": "",
+    "mounts": [
+      {
+        "name": "Plague Priest (on foot)",
+        "pointsCost": 100
+      },
+      {
+        "name": "Plague Priest (on Great Pox Rat)",
+        "pointsCost": 130
+      },
+      {
+        "name": "Plague Priest (on Plague Furnace)",
+        "pointsCost": 150,
+        "repeatable": false
+      }
+    ]
   },
   {
     "name": "Clanrats",
     "category": "core",
     "type": "unit",
-    "pointsCost": 4,
-    "count": 1,
+    "pointsCost": 40,
+    "count": 10,
     "image": "",
     "description": ""
   },
   {
-    "name": "Weapon Teams",
+    "name": "Weapon Teams (pick one)",
     "category": "core",
     "type": "unit",
     "pointsCost": 0,
     "count": 1,
     "image": "",
-    "description": ""
+    "description": "Warpfire Thrower, Ratling Gun, Doom-Flayer, or Poisoned Wind Mortar"
   },
   {
     "name": "Stormvermin",
     "category": "core",
     "type": "unit",
-    "pointsCost": 7,
-    "count": 1,
+    "pointsCost": 70,
+    "count": 10,
     "image": "",
     "description": ""
   },
@@ -181,8 +234,8 @@
     "name": "Skavenslaves",
     "category": "core",
     "type": "unit",
-    "pointsCost": 2,
-    "count": 1,
+    "pointsCost": 20,
+    "count": 10,
     "image": "",
     "description": ""
   },
@@ -190,8 +243,8 @@
     "name": "Night Runners",
     "category": "core",
     "type": "unit",
-    "pointsCost": 7,
-    "count": 1,
+    "pointsCost": 35,
+    "count": 5,
     "image": "",
     "description": ""
   },
@@ -199,27 +252,36 @@
     "name": "Giant Rats",
     "category": "core",
     "type": "unit",
-    "pointsCost": 3,
-    "count": 1,
-    "image": "",
-    "description": ""
-  },
-  {
-    "name": "Packmaster Skweel Gnawtooth",
-    "category": "core",
-    "type": "model",
-    "pointsCost": 0,
-    "count": 1,
+    "pointsCost": 15,
+    "count": 5,
     "image": "",
     "description": "",
-    "repeatable": false
+    "choices": [
+      {
+        "name": "Giant Rats",
+        "pointsCost": 35
+      },
+      {
+        "name": "Giant Rats (with Packmaster)",
+        "pointsCost": 43
+      },
+      {
+        "name": "Giant Rats (with Master Moulder)",
+        "pointsCost": 68
+      },
+      {
+        "name": "Giant Rats (with Skweel Gnawtooth)",
+        "pointsCost": 143,
+        "repeatable": false
+      }
+    ]
   },
   {
     "name": "Rat Swarm",
     "category": "core",
     "type": "unit",
-    "pointsCost": 25,
-    "count": 1,
+    "pointsCost": 50,
+    "count": 2,
     "image": "",
     "description": ""
   },
@@ -227,35 +289,51 @@
     "name": "Gutter Runners",
     "category": "special",
     "type": "unit",
-    "pointsCost": 12,
-    "count": 1,
+    "pointsCost": 60,
+    "count": 5,
     "image": "",
-    "description": ""
+    "description": "",
+    "choices": [
+      {
+        "name": "Gutter Runners",
+        "pointsCost": 60
+      },
+      {
+        "name": "Gutter Runners (with Warp-grinder)",
+        "pointsCost": 120
+      }
+    ]
   },
   {
     "name": "Rat Ogres",
     "category": "special",
     "type": "unit",
-    "pointsCost": 40,
-    "count": 1,
+    "pointsCost": 80,
+    "count": 2,
     "image": "",
-    "description": ""
-  },
-  {
-    "name": "Master Moulder",
-    "category": "special",
-    "type": "model",
-    "pointsCost": 0,
-    "count": 1,
-    "image": "",
-    "description": ""
+    "description": "",
+    "choices": [
+      {
+        "name": "Rat Ogres",
+        "pointsCost": 80
+      },
+      {
+        "name": "Rat Ogres (with Master Moulder)",
+        "pointsCost": 113
+      },
+      {
+        "name": "Rat Ogres (with Skweel Gnawtooth)",
+        "pointsCost": 188,
+        "repeatable": false
+      }
+    ]
   },
   {
     "name": "Plague Monks",
     "category": "special",
     "type": "unit",
-    "pointsCost": 7,
-    "count": 1,
+    "pointsCost": 35,
+    "count": 5,
     "image": "",
     "description": ""
   },
@@ -263,8 +341,8 @@
     "name": "Plague Censer Bearers",
     "category": "special",
     "type": "unit",
-    "pointsCost": 16,
-    "count": 1,
+    "pointsCost": 90,
+    "count": 5,
     "image": "",
     "description": ""
   },
@@ -272,8 +350,8 @@
     "name": "Warplock Jezzails",
     "category": "special",
     "type": "unit",
-    "pointsCost": 20,
-    "count": 1,
+    "pointsCost": 60,
+    "count": 3,
     "image": "",
     "description": ""
   },
@@ -281,10 +359,20 @@
     "name": "Poisoned Wind Globadiers",
     "category": "special",
     "type": "unit",
-    "pointsCost": 10,
-    "count": 1,
+    "pointsCost": 50,
+    "count": 5,
     "image": "",
-    "description": ""
+    "description": "",
+    "choices": [
+      {
+        "name": "Poisoned Wind Globadiers",
+        "pointsCost": 50
+      },
+      {
+        "name": "Poisoned Wind Globadiers (with Poisoned Wind Mortar)",
+        "pointsCost": 115
+      }
+    ]
   },
   {
     "name": "Hell Pit Abomination",
@@ -322,35 +410,34 @@
     "image": "",
     "description": ""
   },
-  
   {
     "name": "Sword of Striking",
     "category": "magic",
-    "type": "",
-    "pointsCost": 30,
+    "type": "magic_weapon",
+    "pointsCost": 15,
     "image": "",
     "description": "Weapon; +1 to hit"
   },
   {
     "name": "Sword of Battle",
     "category": "magic",
-    "type": "",
-    "pointsCost": 25,
+    "type": "magic_weapon",
+    "pointsCost": 15,
     "image": "",
     "description": "Weapon; +1 Attack"
   },
   {
     "name": "Sword of Might",
     "category": "magic",
-    "type": "",
-    "pointsCost": 20,
+    "type": "magic_weapon",
+    "pointsCost": 15,
     "image": "",
     "description": "Weapon; +1 Strength"
   },
   {
     "name": "Biting Blade",
     "category": "magic",
-    "type": "",
+    "type": "magic_weapon",
     "pointsCost": 5,
     "image": "",
     "description": "Weapon; -1 armour save"
@@ -358,47 +445,49 @@
   {
     "name": "Enchanted Shield",
     "category": "magic",
-    "type": "",
-    "pointsCost": 10,
+    "type": "magic_armour",
+    "pointsCost": 15,
     "image": "",
     "description": "Armour; 5+ armour save"
   },
   {
     "name": "Talisman of Protection",
     "category": "magic",
-    "type": "",
+    "type": "talisman",
     "pointsCost": 15,
     "image": "",
     "description": "Talisman; 6+ ward save"
   },
   {
-    "name": "Dispel Scroll",
-    "category": "magic",
-    "type": "",
-    "pointsCost": 25,
-    "image": "",
-    "description": "Arcane; one use only; Automatically dispel an enemy spell."
-  },
-  {
-    "name": "Power Stone",
-    "category": "magic",
-    "type": "",
-    "pointsCost": 20,
-    "image": "",
-    "description": "Arcane; one use only; +2 dice to cast a spell."
-  },
-  {
     "name": "Staff of Sorcery",
     "category": "magic",
-    "type": "",
+    "type": "arcane_item",
     "pointsCost": 35,
     "image": "",
     "description": "Arcane; +1 to dispel"
   },
   {
+    "name": "Dispel Scroll",
+    "category": "magic",
+    "type": "arcane_item",
+    "pointsCost": 25,
+    "image": "",
+    "repeatable": true,
+    "description": "Arcane; one use only; Automatically dispel an enemy spell."
+  },
+  {
+    "name": "Power Stone",
+    "category": "magic",
+    "type": "arcane_item",
+    "pointsCost": 20,
+    "image": "",
+    "repeatable": true,
+    "description": "Arcane; one use only; +2 dice to cast a spell."
+  },
+  {
     "name": "War Banner",
     "category": "magic",
-    "type": "",
+    "type": "magic_standard",
     "pointsCost": 25,
     "image": "",
     "description": "Banner; +1 combat resolution"

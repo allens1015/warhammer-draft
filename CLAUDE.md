@@ -128,7 +128,7 @@ Magic subsection order: Magic Weapons → Magic Armour → Talismans → Arcane 
 
 This app will be embedded in a Drupal 10 portfolio site (Pantheon) as one of several Vue tools. Drupal is a page shell only — no data exchange. The app is built with Vite and committed into a custom Drupal module.
 
-**Module:** `web/modules/custom/portfolio_tools/`  
+**Module:** `web/modules/custom/rpgbookshelf_tools/`  
 Route: `/tools/warhammer-draft` — renders a Twig template with `<div id="app"></div>` and attaches the built assets as a Drupal library.
 
 **Required Vite config changes:**
@@ -147,7 +147,7 @@ build: {
 },
 ```
 
-`VITE_BASE_URL` is set to `/modules/custom/portfolio_tools/tools/warhammer-draft/` at build time (GitHub Actions). Local dev uses the default (`/`).
+`VITE_BASE_URL` is set to `/modules/custom/rpgbookshelf_tools/tools/warhammer-draft/` at build time (GitHub Actions). Local dev uses the default (`/`).
 
 **Local dev workflow:**
 - Active development: `npm run dev` in this repo only. No Drupal needed.
