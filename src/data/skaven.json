@@ -803,5 +803,50 @@
     "pointsCost": 10,
     "image": "",
     "description": "Rituals of skittering urgency allow this banner to deliver a surge of energy to the unit carrying it.<br>Once per battle, at the start of any friendly turn except the first, the banner can be activated. If the unit carrying the banner can march, they can do so at triple speed. Such a rapid expenditure of energy has a cost, as after marching the unit suffers 2D6 Strength 3 hits (no armour saves allowed), distributed as per shooting."
+  },
+  {
+    "name": "Warpmusket (Scavenged)",
+    "category": "magic",
+    "type": "magic_weapon",
+    "pointsCost": 15,
+    "image": "",
+    "repeatable": true,
+    "description": "A warpmusket is a move or fire weapon that has a range of 24\". Strength 5. A warpmusket has Armour Piercing, uses Unstable Ammunition (see page 65), and is a Warpstone Weapon."
+  },
+  {
+    "name": "Poisoned Attacks (Scavenged)",
+    "category": "magic",
+    "type": "magic_weapon",
+    "pointsCost": 15,
+    "image": "",
+    "repeatable": true,
+    "description": "All close combat attacks made by the model count as Poisoned Attacks. This will affect a tail weapon, but not any other magical weapons or the mount."
+  },
+  {
+    "name": "Tail Weapon (Scavenged)",
+    "category": "magic",
+    "type": "magic_weapon",
+    "pointsCost": 5,
+    "image": "",
+    "repeatable": true,
+    "description": "With this additional blade, a Skaven character can make an additional hand weapon attack. This includes models with an additional hand weapon or no magical weapons — the tail weapon itself has no magical properties."
+  },
+  {
+    "name": "Warplock Pistol (Scavenged)",
+    "category": "magic",
+    "type": "magic_weapon",
+    "pointsCost": 8,
+    "image": "",
+    "repeatable": true,
+    "description": "A warplock pistol follows the rules for pistols except that it has a range of 10\". A warplock pistol is a Warpstone Weapon."
+  },
+  {
+    "name": "Rat Hound Bodyguard (Scavenged)",
+    "category": "magic",
+    "type": "magic_weapon",
+    "pointsCost": 5,
+    "image": "",
+    "repeatable": true,
+    "description": "A model with a Rat Hound Bodyguard upgrade gains modified stats, although their venomous instincts means they might still attack their master if the handler is not present."
   }
 ]
